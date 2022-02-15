@@ -1,5 +1,5 @@
 import React from "react";
-import Calendar from "../Schedule/calendar";
+import Calendar from "../components/Schedule/calendar";
 
 const SchedulePage = () => {
 
