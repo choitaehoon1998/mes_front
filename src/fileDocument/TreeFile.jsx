@@ -1,15 +1,16 @@
 import React from "react";
 import InfiniteTree from "react-infinite-tree";
 import TreeNode from "./TreeNode";
-import Toggler from "./TreeToggler";
 
 const data = {
   id: "root",
   name: "root",
+
   children: [
     {
       id: "01",
       name: "000.개요",
+      loadOnDemand: true,
       children: [
         {
           id: "01-01",
@@ -26,10 +27,12 @@ const data = {
     {
       id: "02",
       name: "001.개요-Summary",
+      loadOnDemand: true,
       children: [
         {
           id: "02-01",
           name: "000.개요02",
+          loadOnDemand: true,
           children: [
             {
               id: "02-01-01",
@@ -42,49 +45,41 @@ const data = {
     },
   ],
 };
+
 const TreeFile = () => {
   return (
-    <div>
-      <InfiniteTree width="500px" height="400px" rowHeight={30} data={data}>
-        {({ node, tree }) => {
-          // Determine the toggle state
-          let toggleState = "";
-          const hasChildren = node.hasChildren();
+    <InfiniteTree width={400} height={500} rowHeight={35} data={data}>
+      {({ node, tree }) => {
+        let toggleState = "";
+        const hasChildren = node.hasChildren();
 
-          if (
-            (!hasChildren && node.loadOnDemand) ||
-            (hasChildren && !node.state.open)
-          ) {
-            toggleState = "closed";
-          }
-          if (hasChildren && node.state.open) {
-            toggleState = "opened";
-          }
+        if (!hasChildren || (hasChildren && !node.state.open)) {
+          toggleState = "closed";
+        }
+        if (hasChildren && node.state.open) {
+          toggleState = "opened";
+        }
 
-          return (
-            <TreeNode
-              selected={node.state.selected}
-              depth={node.state.depth}
-              onClick={(event) => {
-                tree.selectNode(node);
-              }}
-            >
-              <Toggler
-                state={toggleState}
-                onClick={() => {
-                  if (toggleState === "closed") {
-                    tree.openNode(node);
-                  } else if (toggleState === "opened") {
-                    tree.closeNode(node);
-                  }
-                }}
-              />
-              <span>{node.name}</span>
-            </TreeNode>
-          );
-        }}
-      </InfiniteTree>
-    </div>
+        return (
+          <TreeNode
+            depth={node.state.depth}
+            onClick={() => {
+              if (toggleState === "closed") {
+                tree.openNode(node);
+              } else if (toggleState === "opened") {
+                tree.closeNode(node);
+              }
+            }}
+          >
+            <>
+              {toggleState === "closed" && <i> + </i>}
+              {toggleState === "opened" && <i> ¬ </i>}
+            </>
+            <span> {node.name} </span>
+          </TreeNode>
+        );
+      }}
+    </InfiniteTree>
   );
 };
 
