@@ -9,7 +9,7 @@ h3 {
   color: #1a3353;
 }
 
-.ant-card {
+.card {
   margin: 0 0 20px;
 }
 
@@ -47,7 +47,7 @@ h3 {
   font-weight: bold;
 }
 
-.ant-card {
+.card {
   color: #455560;
   font-size: 14px;
   font-variant: tabular-nums;
@@ -67,13 +67,13 @@ h3 {
   justify-content: flex-end;
 }
 
-.ant-btn,
-.ant-btn:focus,
-.ant-btn:active {
+.btn-shape,
+.btn-shape:focus,
+.btn-shape:active {
   outline: 0;
 }
 
-.ant-btn {
+.btn-shape {
   line-height: 1.5;
   display: inline-block;
   font-weight: 400;
@@ -82,10 +82,34 @@ h3 {
   height: 40px;
   padding: 8.5px 16px;
   border-radius: 10px;
+  margin: 0 10px 0;
 }
 
 .btn-color {
   background-color: #3e79f7;
   border: 1px solid #3e79f7;
   color: #fff;
+}
+
+.searchbox {
+  box-sizing: border-box;
+  margin: 0px;
+  font-variant: tabular-nums;
+  list-style: none;
+  font-feature-settings: "tnum";
+  position: relative;
+  display: inline-block;
+  width: auto;
+  min-width: 0px;
+  padding: 8.5px 11px;
+  color: rgb(69, 85, 96);
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: rgb(255, 255, 255);
+  background-image: none;
+  border: 1px solid rgb(230, 235, 241);
+  border-radius: 0.625rem;
+  transition: all 0.3s ease 0s;
+  outline: 0;
+  margin-left: 10px;
 }

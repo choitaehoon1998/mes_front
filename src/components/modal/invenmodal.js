@@ -25,7 +25,7 @@ function InventoryModal(props) {
     <>
       <React.Fragment>
         {/* {detailInfo && ( */}
-        <button className="ant-btn btn-color" onClick={openModal}>
+        <button className="btn-shape btn-color" onClick={openModal}>
           등록
         </button>
         {/* )} */}

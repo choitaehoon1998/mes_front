@@ -131,3 +131,10 @@ a:visited {
   outline: none;
   color: inherit;
 }
+
+input[type="number"],
+input[type="password"],
+input[type="text"],
+textarea {
+  appearance: none;
+}
