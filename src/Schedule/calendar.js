@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 
-import { Calendar } from "fullcalendar";
+
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridePlugin from "@fullcalendar/timegrid";
@@ -20,16 +20,10 @@ const Calendar = () => {
         start: "",
         end: ""
         }
-        
     ])
-    
-    const handleDateClick = (arg) => {
-        alert(arg.dateStr)
-    }
-    
 
     const handleSelectDates = (info) => {
-        alert(info.startStr + " 를 선택");
+        alert(info.startStr + " 에 대한 일정을 작성하시겠습니까?");
         const title = prompt("일정 이름");
         console.log(info);
         if (title!=null){
@@ -67,7 +61,6 @@ const Calendar = () => {
                 events={schedule}
                 ref={calendarComponentRef}
                 select={handleSelectDates}
-                eventLimit={3}
             />
         </div>
     );
