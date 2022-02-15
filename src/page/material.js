@@ -17,6 +17,7 @@ export default function Material() {
             <div className="content-seach">
               <SearchForm btnname="검색" title="통합검색 :"></SearchForm>
               <SearchForm btnname="검색" title="등록일 :"></SearchForm>
+              <button className="btn-shape btn-color">검색</button>
             </div>
           </div>
           <div className="card content-box">

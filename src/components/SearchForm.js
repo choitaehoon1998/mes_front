@@ -10,7 +10,6 @@ const SearchForm = (props) => {
           onChange={(e) => props.onchangeFunction(e.target.value)}
           className="searchbox"
         ></input>
-        <button className="btn-shape btn-color">{props.btnname}</button>
       </form>
     </div>
   );
