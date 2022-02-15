@@ -111,15 +111,14 @@
   font-weight: 300;
 }
 
-/*  테이블 */
 .modal-content table {
   width: 80%;
   margin: 0;
 }
-/* .modal-content table tr {
+.modal-content table tr {
   display: block;
   padding: 0 0 20px 0;
-} */
+}
 
 .modal-content table tr:last-child {
   padding: 0;

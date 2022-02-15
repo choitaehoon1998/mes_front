@@ -9,6 +9,12 @@ h3 {
   color: #1a3353;
 }
 
+label {
+  margin: 0 10px 0;
+  font-weight: 700;
+  color: #1a3353;
+}
+
 .card {
   margin: 0 0 20px;
 }
@@ -59,6 +65,9 @@ h3 {
   border-radius: 0.625rem;
 }
 
+.content-seach {
+  display: flex;
+}
 /* 버튼 */
 
 .button-sec {
@@ -83,12 +92,21 @@ h3 {
   padding: 8.5px 16px;
   border-radius: 10px;
   margin: 0 10px 0;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .btn-color {
   background-color: #3e79f7;
   border: 1px solid #3e79f7;
   color: #fff;
+}
+.btn-color-1 {
+  color: #3e79f7;
+  background-color: #fff;
+  border: 1px solid rgb(69, 85, 96);
 }
 
 .searchbox {
