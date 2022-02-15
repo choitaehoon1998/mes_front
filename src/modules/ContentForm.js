@@ -3,7 +3,7 @@ import { DataGrid, IDataGrid } from "axui-datagrid";
 import "../../node_modules/axui-datagrid/style.css";
 export default function ContentForm() {
   const [width, setWidth] = useState(2500);
-  const [height, setHeight] = useState(250);
+  const [height, setHeight] = useState(750);
 
   const columns = [
     {
