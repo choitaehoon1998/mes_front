@@ -1,6 +1,5 @@
 import React,{useState} from "react";
 
-
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridePlugin from "@fullcalendar/timegrid";
@@ -16,12 +15,25 @@ const Calendar = () => {
 
     const [schedule, setSchedule] = useState([
         {
-        title: "",
-        start: "",
-        end: ""
+            title: "sdsd",
+            start: "2022-02-15",
+            end: "2022-02-15"
         }
     ])
-
+    
+    const eventdelet = () => {
+        const a = window.confirm("일정을 삭제하시겠습니까?");
+            if(a){
+                alert("삭제되었습니다.");
+                setSchedule({
+                    title: "",
+                    start: "",
+                    end: ""
+                })
+            }else{
+            }
+            console.log(schedule);
+    }
     const handleSelectDates = (info) => {
         alert(info.startStr + " 에 대한 일정을 작성하시겠습니까?");
         const title = prompt("일정 이름");
@@ -35,15 +47,13 @@ const Calendar = () => {
             const daata = [newEvent];
             setSchedule(daata);
             console.log(daata);
-            console.log(schedule)
         }else{
             console.log("null");
         }
     }
 
     return(
-        <div className="d" >
-            
+        <div className="d">
             <FullCalendar
                 locale="ko"
                 plugins={[
@@ -56,11 +66,12 @@ const Calendar = () => {
                 selectable="true"
                 displayEventTime="true"
                 eventClick={event => {
-                    console.log(event.event._def.publicId);
+                    console.log(event);
                 }}
                 events={schedule}
                 ref={calendarComponentRef}
                 select={handleSelectDates}
+                eventClick={eventdelet}
             />
         </div>
     );
