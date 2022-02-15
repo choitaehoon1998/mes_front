@@ -40,7 +40,6 @@ export default function InvenGrid() {
       columns={columns}
       data={data}
       dataLength={data.length}
-      options={{ frozenColumnIndex: 6 }}
     />
   );
 }
