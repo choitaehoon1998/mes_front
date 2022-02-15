@@ -1,0 +1,91 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * {
+  font-family: "Noto Sans KR", sans-serif;
+}
+/* 공용 */
+h3 {
+  font-size: 23px;
+  color: #1a3353;
+}
+
+.ant-card {
+  margin: 0 0 20px;
+}
+
+/* 레이아웃 */
+.page-layout {
+  padding-left: 220px;
+  box-sizing: border-box;
+  background-color: #fafafb;
+}
+
+.inven-content {
+  padding: 25px;
+  margin-top: 50px;
+  min-height: calc(100vh - 130px);
+  position: relative;
+}
+
+.page-header {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.main-contet {
+  flex: auto;
+  min-height: 0;
+}
+
+.content-box {
+  border: 1px solid #e6ebf1;
+  padding: 20px;
+}
+
+/* 내용 */
+.header-title {
+  font-weight: bold;
+}
+
+.ant-card {
+  color: #455560;
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5;
+  list-style: none;
+  font-feature-settings: "tnum";
+  position: relative;
+  background: #fff;
+  border-radius: 0.625rem;
+}
+
+/* 버튼 */
+
+.button-sec {
+  display: flex;
+  padding: 10px 0;
+  justify-content: flex-end;
+}
+
+.ant-btn,
+.ant-btn:focus,
+.ant-btn:active {
+  outline: 0;
+}
+
+.ant-btn {
+  line-height: 1.5;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  height: 40px;
+  padding: 8.5px 16px;
+  border-radius: 10px;
+}
+
+.btn-color {
+  background-color: #3e79f7;
+  border: 1px solid #3e79f7;
+  color: #fff;
+}
