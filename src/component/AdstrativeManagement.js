@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/light-theme.css";
+
 import "axui-datagrid/style.css";
 import GridDocument from "../fileDocument/GridDocument";
 import FormHeader from "../form/formHeader";

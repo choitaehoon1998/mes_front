@@ -11,7 +11,7 @@ const GroupingList = () => {
       key: "1",
       width: 80,
       label: "Title",
-      formatter: function (args: any) {
+      formatter: function (args) {
         // console.log(args);
         return " * " + args.value;
       },
